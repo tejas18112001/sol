@@ -49,17 +49,31 @@ int main() {
    
     int year , month  , date  , year2 , month2  , date2 ;
 
-    string m1 = "Tejas" ;
+   //  for(int i = 0 ; i<3 ; i++) {
+
+ 
+   
+    string m1 ;
+    cout<<"Enter the name "<<endl ;
+    cin>>m1 ;
     
     
-    for(int i = 0 ; i<3 ; i++) {
+    for(int i = 0 ; i<2 ; i++) {
      
     string book  ;
     cout<<"Enter the book name "<<endl ;
     cin>>book  ;
     
-    int d1[3]  = {year , month , date} ;
-    int d2[3]  = {year2 , month2 , date2} ;
+    cout<<"Enter the issue year , month , and date :"<<endl ;
+    cin>>year>>month>>date ;
+    cout<<"Enter the return date year , month and date :"<<endl ;
+    cin>>year2>>month2>>date2 ;
+    
+
+
+
+    int d1[3]  =  {date , month , year} ;
+    int d2[3]  = {date2 , month2 , year2} ;
    
     int day = dateDiff(d1 , d2) ;
 
@@ -67,10 +81,12 @@ int main() {
    
     }
     
-
+   //  }
    vector<int> ans =  solution() ;
 
-
+   for(auto i : ans) {
+    cout<<"Average day :" << i<<endl  ;
+   }
     
     return 0 ;
 }
